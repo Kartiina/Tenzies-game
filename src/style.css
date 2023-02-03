@@ -1,0 +1,151 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: 'Karla', sans-serif;
+    background-color: #C6D4FF;
+    padding: 20px;
+}
+
+main {
+    margin: auto;
+    background-color: #7D72D5;
+    height: 500px;
+    max-width: 800px;
+    border-radius: 5px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.title {
+    font-size: 3.6em;
+    text-transform: uppercase;
+    color: white;
+    margin: 5px;
+}
+
+.instructions {
+    max-width: 400px;
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    margin-top: 0;
+    text-align: center;
+}
+
+.dice--container {
+    display: grid;
+    grid-template: auto auto / repeat(5, 1fr);
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.die-face {
+    height: 50px;
+    width: 59px;
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.15);
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.die-num {
+    font-size: 2rem;
+}
+
+.roll-dice {
+    height: 50px;
+    width: 150px;
+    border: none;
+    border-radius: 6px;
+    background-color: #FE4A49;
+    color: white;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+.roll-dice:focus {
+    outline: none;
+}
+
+.roll-dice:active {
+    box-shadow: inset 5px 5px 10px -3px rgba(0, 0, 0, 0.7);
+}
+
+.stats-container {
+    display: flex;
+    justify-content: center;
+    color: white;
+    margin-top: 0.2em;
+    font-size: 1.15rem;
+    align-items: center;
+    gap: 2em;
+    width: 100%;
+  }
+
+.time-best {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+}
+
+.time-best > p:last-child {
+  margin-block: 0.1em;
+}
+
+.gradient-text {
+    background-color: #ca4246;
+    background-image: linear-gradient(
+      45deg,
+      #ca4246 16.666%,
+      #e16541 16.666%,
+      #e16541 33.333%,
+      #f18f43 33.333%,
+      #f18f43 50%,
+      #8b9862 50%,
+      #8b9862 66.666%,
+      #476098 66.666%,
+      #476098 83.333%,
+      #a7489b 83.333%
+    );
+    background-size: 100%;
+    background-repeat: repeat;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: rainbow-text-simple-animation-rev 0.75s ease forwards;
+  }
+
+  .gradient-text:hover {
+    animation: rainbow-text-simple-animation 0.5s ease-in forwards;
+  }
+
+@keyframes rainbow-text-simple-animation-rev {
+    0% {
+      background-size: 650%;
+    }
+    40% {
+      background-size: 650%;
+    }
+    100% {
+      background-size: 100%;
+    }
+  }
+  
+  @keyframes rainbow-text-simple-animation {
+    0% {
+      background-size: 100%;
+    }
+    80% {
+      background-size: 550%;
+    }
+    100% {
+      background-size: 650%;
+    }
+  }
